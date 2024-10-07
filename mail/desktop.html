@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 98 Desktop</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/jJMP1Ty.jpg') repeat; /* Windows 98 desktop background */
+            font-family: "Tahoma", sans-serif;
+            color: #000;
+        }
+
+        .desktop {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .icon {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .email-icon {
+            left: 50px; /* Adjust position */
+            top: 50px; /* Adjust position */
+            cursor: pointer;
+        }
+
+        .icon img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .taskbar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #C0C0C0;
+            border-top: 2px solid #A0A0A0;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .taskbar h2 {
+            font-size: 14px;
+            margin: 0;
+            color: #000;
+        }
+
+        .taskbar-button {
+            margin-left: auto;
+            padding: 5px 10px;
+            background-color: #A0A0A0;
+            border: 1px solid #808080;
+            cursor: pointer;
+            font-size: 12px;
+            color: #000;
+        }
+
+        .taskbar-button:hover {
+            background-color: #B0B0B0;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop">
+        <!-- Email Icon -->
+        <div class="icon email-icon" onclick="openMail()">
+            <img src="https://i.imgur.com/oj8vW7M.png" alt="Email Icon"> <!-- Email icon image -->
+            <div>Email</div>
+        </div>
+        
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <h2>Program Manager</h2>
+            <button class="taskbar-button" onclick="openMail()">Open Email</button>
+        </div>
+    </div>
+
+    <script>
+        function openMail() {
+            window.location.href = 'email.html'; // Link to the email client
+        }
+    </script>
+</body>
+</html>
